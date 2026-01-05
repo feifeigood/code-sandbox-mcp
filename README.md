@@ -34,16 +34,28 @@ E2B_DOMAIN=your_domain_here
 
 ### Running the Server
 
-Using MCP CLI:
+Using MCP CLI with Inspector (for testing):
 
 ```bash
-uv run mcp run main.py
+uv run mcp dev code_sandbox_mcp/server.py
+```
+
+Or using MCP CLI:
+
+```bash
+uv run mcp run code_sandbox_mcp/server.py
 ```
 
 Or directly with Python:
 
 ```bash
-python main.py
+python -m code_sandbox_mcp.server
+```
+
+Or using the installed command:
+
+```bash
+code-sandbox-mcp
 ```
 
 ### Available Tools

@@ -13,6 +13,7 @@ logger = logging.getLogger("code-sandbox-mcp")
 
 app = FastMCP("code-sandbox-mcp")
 
+
 @app.tool()
 def create_sandbox(timeout: int = 300, template: str = None) -> str:
     """
@@ -168,7 +169,8 @@ def run_code(code: str, sandbox_id: str = None) -> str:
         return json.dumps(result, indent=2)
 
 
-if __name__ == "__main__":
+def main():
+    """Main entry point for the MCP server."""
     logger.info("Starting MCP server: code-sandbox-mcp")
     logger.info("Transport mode: stdio")
     
@@ -178,3 +180,8 @@ if __name__ == "__main__":
         logger.info("Server stopped by user")
     except Exception as e:
         logger.error(f"Server error: {e}", exc_info=True)
+
+
+if __name__ == "__main__":
+    main()
+
