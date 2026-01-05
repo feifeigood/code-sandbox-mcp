@@ -1,0 +1,11 @@
+[project]
+name = "code-sandbox-mcp"
+version = "0.1.0"
+description = "MCP server for E2B code sandbox - Execute code and commands in secure E2B sandboxes"
+readme = "README.md"
+requires-python = ">=3.10.0"
+dependencies = [
+    "e2b-code-interpreter>=2.4.1",
+    "mcp[cli]>=1.25.0",
+    "python-dotenv>=1.2.1",
+]
